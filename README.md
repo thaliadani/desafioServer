@@ -74,7 +74,7 @@ Pergunta de reflexão: Qual a diferença ao capturar pacotes HTTPS no Wireshark 
 
 ## Questões a serem respondidas:
 ### O que acontece quando tentamos acessar https://localhost:8443 no navegador?Por que aparece um aviso de segurança?
-
+Acessamos os arquivos da pasta. Porque pede um certificado de segurança SSL.
 ### No Wireshark, use o filtro tls. Os dados das requisições HTTPS aparecem de forma legível? Explique o motivo.
 Não aparece pelo fato de ser outro tipo de protocolo, o tls é um padrão de segurança da internet, já o HTTPS é uma forma de comunicação entre cliente e servidor.
 ### Quais pacotes aparecem na negociação do protocolo TLS? O que significa Client Hello e Server Hello?
