@@ -34,6 +34,10 @@ Veja os métodos (GET, POST, etc.).
 
 ## Desafio Extra: Capturar tráfego HTTP com Wireshark (Opcional)
 
+O Wireshark é um analisador de pacotes de rede (packet sniffer) que permite capturar, visualizar e inspecionar o tráfego que passa por uma rede em tempo real. Ele é amplamente utilizado por profissionais de segurança, administradores de rede e desenvolvedores para diagnosticar problemas, analisar protocolos e detectar possíveis ameaças.
+
+Material de apoio: https://www.youtube.com/watch?v=TYk6ejP7dmI
+
 Abra o Wireshark e selecione sua interface de rede (Wi-Fi ou Ethernet).
 Use o filtro http para visualizar apenas pacotes HTTP.
 Acesse http://localhost:8080 novamente e veja os pacotes sendo capturados.
@@ -67,3 +71,15 @@ O navegador pode mostrar um aviso de segurança porque o certificado é autoassi
 Pergunta de reflexão: Qual a diferença ao capturar pacotes HTTPS no Wireshark em comparação com HTTP?
 
 ## Criamos um servidor HTTP simples.✅ Exploramos as requisições no navegador.✅ Configuramos um servidor HTTPS para criptografia de dados.
+
+## Questões a serem respondidas:
+O que acontece quando tentamos acessar https://localhost:8443 no navegador? Por que aparece um aviso de segurança?
+No Wireshark, use o filtro tls. Os dados das requisições HTTPS aparecem de forma legível? Explique o motivo.
+Quais pacotes aparecem na negociação do protocolo TLS? O que significa Client Hello e Server Hello?
+Qual é a principal vantagem do HTTPS em relação ao HTTP?
+Por que não devemos inserir senhas ou informações sensíveis em sites sem HTTPS?
+O que aconteceria se um atacante capturasse pacotes HTTP em uma rede pública (Wi-Fi de um café, por exemplo)?
+Como o Wireshark pode ser usado para diagnosticar problemas de rede além de capturar pacotes HTTP/HTTPS?
+Dê um exemplo de uma aplicação real onde a análise de tráfego de rede pode ser útil.
+Como funciona o processo de verificação de um certificado SSL em um site real?
+O HTTPS pode ser quebrado? Se sim, como e em quais casos?
