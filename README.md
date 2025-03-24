@@ -73,13 +73,23 @@ Pergunta de reflexão: Qual a diferença ao capturar pacotes HTTPS no Wireshark 
 ## Criamos um servidor HTTP simples.✅ Exploramos as requisições no navegador.✅ Configuramos um servidor HTTPS para criptografia de dados.
 
 ## Questões a serem respondidas:
-O que acontece quando tentamos acessar https://localhost:8443 no navegador? Por que aparece um aviso de segurança?
-No Wireshark, use o filtro tls. Os dados das requisições HTTPS aparecem de forma legível? Explique o motivo.
-Quais pacotes aparecem na negociação do protocolo TLS? O que significa Client Hello e Server Hello?
-Qual é a principal vantagem do HTTPS em relação ao HTTP?
-Por que não devemos inserir senhas ou informações sensíveis em sites sem HTTPS?
-O que aconteceria se um atacante capturasse pacotes HTTP em uma rede pública (Wi-Fi de um café, por exemplo)?
-Como o Wireshark pode ser usado para diagnosticar problemas de rede além de capturar pacotes HTTP/HTTPS?
-Dê um exemplo de uma aplicação real onde a análise de tráfego de rede pode ser útil.
-Como funciona o processo de verificação de um certificado SSL em um site real?
-O HTTPS pode ser quebrado? Se sim, como e em quais casos?
+### O que acontece quando tentamos acessar https://localhost:8443 no navegador?Por que aparece um aviso de segurança?
+
+### No Wireshark, use o filtro tls. Os dados das requisições HTTPS aparecem de forma legível? Explique o motivo.
+Não aparece pelo fato de ser outro tipo de protocolo, o tls é um padrão de segurança da internet, já o HTTPS é uma forma de comunicação entre cliente e servidor.
+### Quais pacotes aparecem na negociação do protocolo TLS? O que significa Client Hello e Server Hello?
+Application Data, Continuation Data, Server Hello, Client Hello,Change Cipher Spec,Client Key Exchange,Encrypted Alert,etc. Para estabelecer conexão e criptografia entre os dois durante a comunicação do cliente e servidor durante o handshake TLS/SSL.
+### Qual é a principal vantagem do HTTPS em relação ao HTTP?
+O HTTPS é mais seguro do que HTTP pelo fato de usar criptografia para proeger os dadps.
+### Por que não devemos inserir senhas ou informações sensíveis em sites sem HTTPS?
+O HTTPS usa criptografia para proteger os dados do usuário e o HTTP não possui nenhuma proteção.
+### O que aconteceria se um atacante capturasse pacotes HTTP em uma rede pública (Wi-Fi de um café, por exemplo)?
+Ele conseguiria pegar todos os dados,ou seja teria seus arquivos.
+### Como o Wireshark pode ser usado para diagnosticar problemas de rede além de capturar pacotes HTTP/HTTPS?
+O Wireshark mostra de forma detelhada o processo dos pacotes em tempo real, armazena os dados para acessar offline, gera um relátorio detlhado do tráfego e filtra o log para facilitar a busca.
+### Dê um exemplo de uma aplicação real onde a análise de tráfego de rede pode ser útil.
+Para saber se um site tem algum tipo de malwares e outras ameaças, para verificar se algo está mal configurado na rede.
+### Como funciona o processo de verificação de um certificado SSL em um site real?
+A verificação faz com que o site seja autenticado e possibilita uma conexão segura usando criptografia.
+### O HTTPS pode ser quebrado? Se sim, como e em quais casos?
+Sim, depende da força da cifra e do tamanho da chave. Para ser quebrado pode se usar o TLS1.0 com uma chave RSA de 1024 e SHA-1.Pode ser usado para testar se o site realmente está bem protegido, em caso de investigações policiais.
